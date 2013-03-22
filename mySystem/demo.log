@@ -1,0 +1,43 @@
+2012-03-14 09:57:46,064 main - **********freeConns.size():0   allocatedConns.size():0 Thread:main
+2012-03-14 09:58:07,530 jdbc:db2://31.16.1.99:50110/masdb-watcher - **********freeConns.size():0   allocatedConns.size():0 Thread:jdbc:db2://31.16.1.99:50110/masdb-watcher
+2012-03-14 11:29:04,232 main - **********freeConns.size():0   allocatedConns.size():0 Thread:main
+2012-03-14 11:29:25,326 jdbc:db2://31.16.1.99:50110/masdb-watcher - **********freeConns.size():0   allocatedConns.size():0 Thread:jdbc:db2://31.16.1.99:50110/masdb-watcher
+2012-03-14 11:29:46,312 main - **********freeConns.size():0   allocatedConns.size():0 Thread:main
+2012-03-14 11:29:46,312 jdbc:db2://31.16.1.99:50110/masdb-watcher - Test db connection error:IO Exception opening socket to server 31.16.1.99 on port 50110.  The DB2 Server may be down.
+com.ibm.db2.jcc.b.SqlException: IO Exception opening socket to server 31.16.1.99 on port 50110.  The DB2 Server may be down.
+	at com.ibm.db2.jcc.a.a.<init>(a.java:137)
+	at com.ibm.db2.jcc.a.b.a(b.java:1542)
+	at com.ibm.db2.jcc.b.o.<init>(o.java:795)
+	at com.ibm.db2.jcc.a.b.<init>(b.java:298)
+	at com.ibm.db2.jcc.DB2Driver.connect(DB2Driver.java:162)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at com.huawei.utils.db.DBPool.getInnerConnection(DBPool.java:793)
+	at com.huawei.utils.db.DBPool.innerTidy(DBPool.java:985)
+	at com.huawei.utils.db.DBPool.tidy(DBPool.java:968)
+	at com.huawei.utils.db.DBPool.access$1(DBPool.java:958)
+	at com.huawei.utils.db.DBPool$TidyThread.run(DBPool.java:181)
+2012-03-14 11:29:46,312 jdbc:db2://31.16.1.99:50110/masdb-watcher - Tidy connection for IO Exception opening socket to server 31.16.1.99 on port 50110.  The DB2 Server may be down.
+2012-03-14 11:29:46,312 jdbc:db2://31.16.1.99:50110/masdb-watcher - ------------------Find dbpool disconnect ,begin clear connection.
+2012-03-14 13:36:51,566 main - **********freeConns.size():0   allocatedConns.size():0 Thread:main
+2012-03-14 17:23:29,136 main - **********freeConns.size():0   allocatedConns.size():0 Thread:main
+2012-03-14 17:23:50,200 jdbc:db2://31.16.1.99:50110/masdb-watcher - **********freeConns.size():0   allocatedConns.size():0 Thread:jdbc:db2://31.16.1.99:50110/masdb-watcher
+2012-03-15 09:04:07,092 main - **********freeConns.size():0   allocatedConns.size():0 Thread:main
+2012-03-15 09:04:28,254 jdbc:db2://31.16.1.99:50110/masdb-watcher - **********freeConns.size():0   allocatedConns.size():0 Thread:jdbc:db2://31.16.1.99:50110/masdb-watcher
+2012-03-15 09:04:49,228 main - **********freeConns.size():0   allocatedConns.size():0 Thread:main
+2012-03-15 09:04:49,228 jdbc:db2://31.16.1.99:50110/masdb-watcher - Test db connection error:IO Exception opening socket to server 31.16.1.99 on port 50110.  The DB2 Server may be down.
+com.ibm.db2.jcc.b.SqlException: IO Exception opening socket to server 31.16.1.99 on port 50110.  The DB2 Server may be down.
+	at com.ibm.db2.jcc.a.a.<init>(a.java:137)
+	at com.ibm.db2.jcc.a.b.a(b.java:1542)
+	at com.ibm.db2.jcc.b.o.<init>(o.java:795)
+	at com.ibm.db2.jcc.a.b.<init>(b.java:298)
+	at com.ibm.db2.jcc.DB2Driver.connect(DB2Driver.java:162)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at com.huawei.utils.db.DBPool.getInnerConnection(DBPool.java:793)
+	at com.huawei.utils.db.DBPool.innerTidy(DBPool.java:985)
+	at com.huawei.utils.db.DBPool.tidy(DBPool.java:968)
+	at com.huawei.utils.db.DBPool.access$1(DBPool.java:958)
+	at com.huawei.utils.db.DBPool$TidyThread.run(DBPool.java:181)
+2012-03-15 09:04:49,228 jdbc:db2://31.16.1.99:50110/masdb-watcher - Tidy connection for IO Exception opening socket to server 31.16.1.99 on port 50110.  The DB2 Server may be down.
+2012-03-15 09:04:49,228 jdbc:db2://31.16.1.99:50110/masdb-watcher - ------------------Find dbpool disconnect ,begin clear connection.

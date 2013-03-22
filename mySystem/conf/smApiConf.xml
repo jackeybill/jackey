@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="GB18030"?>
+<!--sm短信api 配置文件样例  sms api config file example-->
+<config>        
+        <!--数据库配置  db settings-->
+        <database>
+        	<eiedb>
+               <!--
+               driver url name correct-charset test-sql connection-timeout login-timeout user
+                        password
+                        max-connection
+                        max-free-connection
+                        watch-interval
+               -->
+                <driver>com.ibm.db2.jcc.DB2Driver</driver>
+                <!--com.ibm.db2.jcc.DB2Driver-->
+                <!--com.mysql.jdbc.Driver-->
+                <!--com.microsoft.jdbc.sqlserver.SQLServerDriver--> 
+                <!--net.sourceforge.jtds.jdbc.Driver-->
+                
+                <!--jdbc:microsoft:sqlserver://10.71.100.183:1433;DatabaseName=db_customsms-->
+                <!--jdbc:mysql://10.71.99.51/DB_CustomSMS-->
+                <!--jdbc:db2://10.71.100.195:50001/MASDB-->
+		<!--jdbc:db2://127.0.0.1:50110/masdb-->
+                <url>jdbc:db2://31.16.1.99:50110/masdb</url>
+                <!--select 1 from sysibm.sysdummy1-->
+                <!--select 1 from sysibm.sysdummy1-->
+                <test-sql> select 1 from sysibm.sysdummy1</test-sql>
+                <!--为负数的时候不检查状态，不检查超时，为正数检查状态，检查超时，以秒为单位-->
+                <login-timeout>360</login-timeout>
+                <connection-timeout>120</connection-timeout>
+                <max-connection>20</max-connection>
+                <max-free-connection>20</max-free-connection>
+                <!--CustomSMS-->
+				<user>db2inst1</user>
+                <password>Y4yhl9T</password>
+                <!--为负数的时候不检查状态，不检查超时，为正数检查状态，检查超时，以秒为单位
+                db connect status check interval.
+                -->
+                <watch-interval>10</watch-interval>
+                <!--在数据库连接断掉的时候，是否锁定请求数据连接的线程，
+                true：锁定，false：不锁定，默认false，建议不要修改。
+                do not modify this setting.
+                -->
+                <lockGetConnectionThread>false</lockGetConnectionThread>
+                <!--决定是哪个版本的api，可以配置mas.db2,mas.mssql,eie.mssql,mas.db262-->
+                <version>mas.db2</version>
+           </eiedb>
+        </database>
+				<!--
+				短信缺省属性配置，参见SMSendBean的结构体描述。
+				sms submit default settings,you can also see SMSendBean construction descriptions.
+				you can modify it when you need.
+				-->
+        <smDefaultProperties>
+        	<DestAddrType>0</DestAddrType>
+        	<FeeCode>0</FeeCode>
+        	<FeeType>01</FeeType>
+        	<MessageID>0</MessageID>
+        	<MsgID></MsgID>
+        	<NeedStateReport>0</NeedStateReport>
+        	<OrgAddr>106573000605</OrgAddr>
+        	<ServiceId>MSH0019901</ServiceId>
+        	<SmType>0</SmType>
+        	<TryTimes>3</TryTimes>
+        	<smscotentLength>300</smscotentLength>
+        </smDefaultProperties>
+        <!--日志配置-->
+        <logSetting>
+        	<!--开发包日志级别，默认为WARN（不配置的时候，或者配置错误的时候），
+        	可以配置为DEBUG、INFO、WARN、ERROR、FATAL.
+        	sms api log level.
+        	-->
+        	<logLevel>info</logLevel>
+        	<!--开发包日志的位置，如果为consle，将意味着输出到屏幕上，
+        	为其他，则是日志文件路径，日志将以每日备份的形式保存。
+        	不设置，默认采用应用程序的设置。
+        	sms api log file location,'consle' means print to consle.
+        	-->
+        	<logFile>consle</logFile>
+        </logSetting>
+        <!--相关sql语句配置，暂时无须配置-->
+        <sqls>
+        </sqls>
+</config>
