@@ -25,7 +25,7 @@ import com.hp.ucmdb.federationspi.data.resource.LocatePushQueriesResourcesInput;
 import com.hp.ucmdb.federationspi.data.resource.LocatePushQueriesResourcesOutput;
 import com.hp.ucmdb.federationspi.exception.DataAccessException;
 
-public class test implements PushAdapterConnector {
+public class testMe implements PushAdapterConnector {
 	
 	
 	private PushDataAdapterEnvironment _env;
