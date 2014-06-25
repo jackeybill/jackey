@@ -13,6 +13,55 @@ function getClass() {
 	return XueJunService;
 }
 
+//lib.test。listStructure
+
+function listStructure(){
+	//var aci = lib;
+	//var aci = lib.acicategory;
+	//var aci = system.functions;
+	//var aci = new XML();
+	//var aci = new Array();
+	//var aci = "sdfsdfsdf";
+	//var aci = {};
+	//var aci = new SCFile("OOFlow");
+	var aci = $("#relationManagerDbdictService");
+	print("me");
+	for (var name in aci) {
+    	print( name );
+    	//print( aci[x] );
+
+	}
+	// for (var obj in window){window.hasOwnProperty(obj) && typeof window[obj] === 'function')objs.push(obj)};
+}
+
+function listStructureOK(){
+	var aci = lib.acicategory;
+	var aci = "sdfsdfsdf";
+	var aci = $("#relationManagerDbdictService");
+	for (x in aci) {
+    	//txt += person[x];
+    	print( x );
+    	//print( x["arguments"] );
+    	for( y in x ){
+    		//print( x[y] );
+    	}
+    	break;
+	}
+}
+
+
+function listJSlib(){
+	var str;
+	var scriptLibrary = new SCFile("ScriptLibrary");	
+	var rc=scriptLibrary.doSelect( true ) ;
+	while ( rc == RC_SUCCESS){
+		str += " "+scriptLibrary.name;
+		rc=scriptLibrary.getNext();	
+	}
+	print( str );		
+}
+
+listStructure();
 
 function testMe(){
 	var relation = new SCFile("relation");
@@ -30,6 +79,16 @@ function testMe(){
 	
 	print( relation );
 }
+
+truncateBydefType : function(defType) {
+    //var relations = $("relation").select('def.type="' + defType + '" and status ~= "fixed"').list();
+    
+    $("relation").select('def.type="' + defType + '" and status ~= "fixed"').iterate(function(relation) {
+       relation.doDelete();
+    });
+},
+
+
 function testMe2(){
 	//erddefService.buildRelations();
 	//print( 'filename()|number'.split('|').length );
