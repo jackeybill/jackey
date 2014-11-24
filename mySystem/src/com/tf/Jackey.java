@@ -15,7 +15,9 @@ public class Jackey {
 	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
 		Jackey jackey = new Jackey();
-		jackey.get();
+		//jackey.get();
+		
+		System.out.println( "file.syt.em".replace('.', '_') );
 	}
 
 	public void addBook(String bookName, String author) throws Exception {

@@ -15,6 +15,19 @@ function getClass() {
 
 //lib.test。listStructure
 
+function getFieldInfo(){
+	var $ = lib.c.$;
+	var dbdictService = $("#dbdictService");
+	var dbdict = $("category").dbdict();
+	var descriptorMeta = dbdictService.getDescriptorMeta(dbdict["field"]);
+	var fieldMeta = dbdictService.getFieldMeta("qbe.format", descriptorMeta, false);
+	
+	print(fieldMeta.path);
+	
+	var sqlFieldMeta = dbdictService.getFieldMetaWithSQLInfo(fieldMeta);
+	print(sqlFieldMeta.field.name);
+}
+
 function listStructure(){
 	//var aci = lib;
 	//var aci = lib.acicategory;
