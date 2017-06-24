@@ -1,2 +1,34 @@
 Reat_Stack_TodoMvc
 https://github.com/bugall/Reat_Stack_TodoMvc
+
+贴个react react-router redux 的demo https://github.com/sdhhqb/redux-starter-kit
+
+https://github.com/JasonBai007/reactSPA
+
+github地址：https://github.com/snowy-dong/react-hot-web/361
+github预览地址：https://snowy-dong.github.io/react-hot-web/index.html536
+
+1:npm install（ 淘宝源用cnpm ）
+
+2:npm run start 或 grunt serve（如果安装了grunt 输入此命令直接打开浏览器显示 ）
+
+3:浏览器输入 http://localhost:800091 查看
+
+4:grunt build （此命令输出静态文件）
+
+mongodb+react: https://github.com/hawkroc/ai_test
+
+https://github.com/zyl1314/cnodejs-forum
+
+可以改使用这个阿里巴巴集团做的，简单且可用在JSX和纯JS上面，也支持货币、日期、英文复数型的多语言显示https://github.com/alibaba/react-intl-universal
+
+https://github.com/chikara-chan/react-isomorphic-boilerplate
+
+New start: 
+  https://github.com/ElemeFE/react-native-reference
+  
+https://github.com/chikara-chan/react-isomorphic-boilerplate
+
+
+
+
